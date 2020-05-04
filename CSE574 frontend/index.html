@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/lib/materialize.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+    
+    <!-- Nav Bar -->
+    <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo center"><strong>CSE 574 Project(Dr.Sreyasee Das Bhattacharjee): Deepfake Classifier: Choose the Fake Image</strong></a>
+          <a class="btn-floating btn-large halfway-fab waves-effect waves-light pulse scale-transition" id="plus-btn" onclick="location.reload()" style="right: 60px;">
+            <i class="material-icons" id="trigger-btn-icon">refresh</i>
+          </a>
+        </div>
+    </nav>
+    <!-- Nav Bar End -->
+
+    <div class="container" id="placeholder">
+
+      <div class="row">
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <div id="local-input-img" onclick="select(1)"><img src="assets/preloader.gif" alt="Could not loading"></div>
+              <a class="btn-floating halfway-fab waves-effect waves-light" onclick="window.open(getPath(1))"><i class="material-icons">zoom_out_map</i></a>
+            </div>
+            <div class="card-content" onclick="select(1)">
+              
+              <span id="person1" style="display: inline;" class="card-title">Person A </span> <div style="display: inline;" id="local-input-title-container"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <div id="local-depth-img" onclick="select(2)"><img src="assets/preloader.gif" alt="Could not loading"></div>
+              <a class="btn-floating halfway-fab waves-effect waves-light" onclick="window.open(getPath(2))"><i class="material-icons">zoom_out_map</i></a>
+            </div>
+            <div class="card-content" onclick="select(2)">
+              <span id="person2" style="display: inline;" class="card-title">Person B </span> <div style="display: inline;" id="local-depth-title-container"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  
+      <div class="row" style="margin-top: 20px; margin-bottom: 0;">
+
+        <div class="col s12 m2" style="width: 21%;"></div>
+    
+         <div class="col s12 m8" style="width: 58%;">
+    
+            <ul class="collapsible popout">
+
+              <li>
+                <div class="collapsible-header">
+                        <div class="col s12 m3" id="answer"><i class="material-icons left">photo_size_select_actual</i></div>
+                        <div class="col s12 m6" id="answered" style="color: #777B7E;">Pick a person</div>
+                        <div class="col s12 m3"><i class="material-icons right">keyboard_arrow_down</i></div>
+                </div>
+
+                <div class="collapsible-body">
+                  <span style="color: #777B7E;" id="answer_body">Click on an image card.</span>
+                </div>
+
+               </li>
+    
+                <li>
+                    <div class="collapsible-header">
+                            <div class="col s12 m3"><i class="material-icons left">visibility</i></div>
+                            <div class="col s12 m6" style="color: #777B7E;" id="conn-status-text">Model Prediction</div>
+                            <div class="col s12 m3"><i class="material-icons right">keyboard_arrow_down</i></div>
+                    </div>
+    
+                    <div class="collapsible-body">
+                            <span style="color: #777B7E;" id="model-body">First pick a person.</span>
+                    </div>
+                </li>
+    
+            </ul>
+    
+          </div>
+         </div>
+
+    </div>
+
+
+    <!-- JS -->
+    <script src="assets/lib/jquery.js"></script>
+    <script src="assets/lib/materialize.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
