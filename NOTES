@@ -1,0 +1,3 @@
+The secondary data-set we used is not included in the download_data scripts.
+For this reason, running the script as-is will probably fail, as our
+data/not_ads directory dataset is not created.

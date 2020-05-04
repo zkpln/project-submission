@@ -1,0 +1,23 @@
+
+body {
+  font-family: "Helvetica", "Ariel", sans-serif;
+}
+
+#fileDrop {
+  margin: 0 auto;
+  border: 1em solid red;
+  padding: 2em;
+  width: 75%;
+  height: 15em;
+}
+
+#fileDrop.dragover {
+  border-color: blue;
+}
+
+#fileDrop .caption {
+  display: block;
+  font-size: xx-large;
+  text-align: center;
+}
+
